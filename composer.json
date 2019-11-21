@@ -1,6 +1,0 @@
-{
-    "require-dev": {
-        "barryvdh/laravel-ide-helper": "^2.6",
-        "barryvdh/laravel-debugbar": "^3.2"
-    }
-}

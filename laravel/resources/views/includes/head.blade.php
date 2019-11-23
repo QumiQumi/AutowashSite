@@ -1,18 +1,26 @@
-<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Checkout our layout</title>
-<!-- load bootstrap from a cdn -->
-{{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> --}}
 
 @section('scripts')
 
 <!-- Scripts -->
-{{-- <script src="{{asset('js/app.js')}}" ></script> --}}
-
-
-<!-- Fonts -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-
+{{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
+<script src="{{ asset('js/modernizr.custom.js') }}" defer></script>
 
 <!-- Styles -->
-<link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" />
-<link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+
+{{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
+<link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+<link href="{{ asset('css/pogo-slider.min.css') }}" rel="stylesheet">
+<link href="{{ asset('css/swipebox.css') }}" rel="stylesheet">
+<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+<!-- Fonts -->
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href="//fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+

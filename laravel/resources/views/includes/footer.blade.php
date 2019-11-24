@@ -1,3 +1,47 @@
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <div class="agileinfo_footer_grids">
+            <div class="col-md-4 agileinfo_footer_grid">
+                <h2><a href="index.html">Автомобильная <span>Мойка</span></a></h2>
+                <ul class="top-links two three">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 agileinfo_footer_grid">
+                <h3>Контактная информация</h3>
+                <ul class="agileinfo_footer_grid_list">
+                    <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Томский политехнический университет <span>Томск</span></li>
+                    <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">bestcarwash@mail.ru</a></li>
+                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i> +7 (800) 555 35 35</li>
+                </ul>
+            </div>
+            <div class="col-md-4 agileinfo_footer_grid">
+                <h3>Навигация по сайту</h3>
+                <ul class="agileinfo_footer_grid_nav">
+                    <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i> <a class="scroll" href="#home">Домой</a></li>
+                    <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i> <a class="scroll" href="#service">О компании</a></li>
+                    <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i> <a class="scroll" href="#about">Прайс</a></li>
+                    <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i> <a class="scroll" href="#team">Наша командa</a></li>
+                    <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i> <a class="scroll" href="#contact">Контакты</a></li>
+                    <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i> <a class="scroll" href="#contact">Новости</a></li>
+                    <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i> <a class="scroll" href="#contact">Отзывы</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+
+    </div>
+</div>
+<div class="w3agile_footer_copy">
+    <p>&copy; 2019 Элитная Автомобильная Мойка.</p>
+</div>
+<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+{{-- Footer --}}
 <!-- //footer -->
     <!-- js files -->
     <!-- swipe box js -->

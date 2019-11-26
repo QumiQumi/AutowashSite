@@ -1,24 +1,4 @@
-{{--
-    <!doctype html>
-<html>
-<head>
-   @include('includes.head')
-</head>
-<body>
-<div class="container">
-   <header class="row">
-       @include('includes.header')
-   </header>
-   <div id="main" class="row">
-        @yield('content')
-   </div>
-   <footer class="row">
-       @include('includes.footer')
-   </footer>
-</div>
-</body>
-</html>
---}}
+
 
 <!DOCTYPE HTML>
 <html>
@@ -33,68 +13,7 @@
     <!-- Nav tabs -->
     <!--what-we-do-->
 {{--
-    <div class="tabs" id="about">
-        <div class="container">
-            <div class="t-head">
-                <h3 class="head">WHY CHOOSE US?</h3>
-                <p class="urna">Vestibulum commodo urna sit amet volutpat.</p>
-            </div>
-            <div class="tabs-grids">
-                <div id="parentVerticalTab">
-                    <ul class="resp-tabs-list hor_1">
-                        <li>Car Wash</li>
-                        <li>Car Repair</li>
-                        <li>Car Welding</li>
-                        <li>Car Delivery</li>
 
-
-                    </ul>
-                    <div class="resp-tabs-container hor_1">
-                        <div class="text agile-info">
-                            <h4>CAR WASH</h4>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accUKntium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
-                                ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-                            <p>Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
-                                ut aliquid ex ea commodi consequatur.</p>
-                            <img src="images/6.jpg" alt=" " class="img-responsive" />
-
-                        </div>
-                        <div class="text agile-info">
-                            <h4>CAR REPAIR</h4>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accUKntium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
-                                ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-                            <p>Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
-                                ut aliquid ex ea commodi consequatur.</p>
-                            <img src="images/9.jpg" alt=" " class="img-responsive" />
-
-                        </div>
-
-                        <div class="text agile-info">
-                            <h4>CAR WELDING</h4>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accUKntium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
-                                ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-                            <p>Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
-                                ut aliquid ex ea commodi consequatur.</p>
-                            <img src="images/7.jpg" alt=" " class="img-responsive" />
-
-                        </div>
-
-
-
-                        <div class="text agile-info">
-                            <h4>CAR DELIVERY</h4>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accUKntium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
-                                ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-                            <p>Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
-                                ut aliquid ex ea commodi consequatur.</p>
-                            <img src="images/5.jpg" alt=" " class="img-responsive" />
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!--//what-we-do-->
     <!--count-down -->
     <div class="count" id="service">

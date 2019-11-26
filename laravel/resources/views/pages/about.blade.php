@@ -31,8 +31,7 @@
 
 </div>
 
-
-
+{{-- Why us? --}}
 <div class="tabs" id="about">
     <div class="container">
         <div class="t-head">
@@ -40,19 +39,14 @@
         </div>
         <div class="tabs-grids">
             <div id="parentVerticalTab">
-                {{-- <div class="resp-tabs-nav">
-                    <ul class="resp-tabs-list hor_1">
-                        @foreach ($abouts as $about)
-                        <li>{{$about->title}} </li>
-                        @endforeach
-                    </ul>
-                </div> --}}
                 <div class="resp-tabs-container hor_1">
                     @foreach ($abouts as $about )
                     <div class="text agile-info">
                             <h4>{{$about->title}} </h4>
                             <p>{{$about->body}} </p>
-                        </div>
+                    </div>
+
+                    <img src="images/m{{$loop->index+1}}.jpg" alt=" " class="img-responsive" />
                     @endforeach
 
                 </div>
@@ -60,4 +54,57 @@
         </div>
     </div>
 </div>
+
+{{-- banner --}}
+ <!--//what-we-do-->
+    <!--count-down -->
+    <div class="count" id="service">
+            <div class="container">
+                <div class="col-md-3 agile_count_grid">
+                    <div class="agile_count_grid_left">
+                        <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                    </div>
+                    <div class="agile_count_grid_right">
+                        <p class="counter">324</p>
+                    </div>
+                    <div class="clearfix"> </div>
+                    <h3>Чистых машин</h3>
+                </div>
+                <div class="col-md-3 agile_count_grid">
+                    <div class="agile_count_grid_left">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    </div>
+                    <div class="agile_count_grid_right">
+                        <p class="counter">543</p>
+                    </div>
+                    <div class="clearfix"> </div>
+                    <h3>Happy Clients</h3>
+                </div>
+                <div class="col-md-3 agile_count_grid">
+                    <div class="agile_count_grid_left">
+                        <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+                    </div>
+                    <div class="agile_count_grid_right">
+                        <p class="counter">434</p>
+                    </div>
+                    <div class="clearfix"> </div>
+                    <h3>People Loved</h3>
+                </div>
+                <div class="col-md-3 agile_count_grid">
+                    <div class="agile_count_grid_left">
+                        <span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span>
+                    </div>
+                    <div class="agile_count_grid_right">
+                        <p class="counter">10000</p>
+                    </div>
+                    <div class="clearfix"> </div>
+                    <h3>Save Income</h3>
+                </div>
+
+                <div class="clearfix"> </div>
+
+            </div>
+        </div>
 @stop
+
+

@@ -6,10 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Service extends Model
 {
-    public function servicesForCar()
+    public function priceForCar()
     {
-        return $this->hasMany('App\ServiceForCar');
+        return $this->hasMany(ServiceForCar::class);
     }
-    //test
-    //text/1
+    public function cars()
+    {
+        return Car::all();
+    }
+
 }

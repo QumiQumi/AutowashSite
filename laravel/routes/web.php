@@ -26,20 +26,24 @@ Route::get(
         );
         //return View::make('pages.about');
     }
-);
+)->name('about');
 
-Route::get(
-    '/pricelist',
-    function () {
-        return View::make('pages.pricelist');
-    }
-);
+// Route::get(
+//     '/pricelist',
+//     function () {
+//         return View::make('pages.pricelist');
+//     }
+// )->name('pricelist');;
+Route::get('/pricelist', 'ServiceController@index')->name('pricelist');
+
+
 Route::get(
     '/team',
     function () {
         return View::make('pages.team');
     }
-);
+)->name('team');
+
 Route::get(
     '/gallery',
     function () {

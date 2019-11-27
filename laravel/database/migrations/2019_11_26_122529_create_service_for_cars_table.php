@@ -20,6 +20,8 @@ class CreateServiceForCarsTable extends Migration
             $table->double('price');
             $table->timestamps();
 
+            $table->unique(['service_id', 'car_id']);
+
             $table->foreign('service_id')
                 ->references('id')
                 ->on('services')

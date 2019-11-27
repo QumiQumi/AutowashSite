@@ -43,14 +43,15 @@
 
 {{-- Footer --}}
 <!-- //footer -->
-    <!-- js files -->
-    <!-- swipe box js -->
+   <!-- js files -->
+    <!-- SLIDER  js -->
     <script src="js/jquery-2.2.3.min.js"></script>
-    <script src="js/jquery.pogo-slider.min.js"></script>
-    <script src="js/main.js"></script>
+    {{-- <script src="js/jquery.pogo-slider.min.js"></script> --}}
+    {{-- <script src="js/main.js"></script> --}}
+
     <!-- /js files -->
     <!-- Starts-Number-Scroller-Animation-JavaScript -->
-    <script src="js/waypoints.min.js"></script>
+    {{-- <script src="js/waypoints.min.js"></script>
     <script src="js/counterup.min.js"></script>
     <script>
         jQuery(document).ready(function($) {
@@ -59,9 +60,9 @@
                 time: 1000
             });
         });
-    </script>
+    </script> --}}
     <!-- //Starts-Number-Scroller-Animation-JavaScript -->
-    <script type="text/javascript">
+    {{-- <script type="text/javascript">
         $(window).load(function() {
             $("#flexiselDemo1").flexisel({
                 visibleItems: 4,
@@ -90,9 +91,9 @@
     </script>
     <script type="text/javascript" src="js/jquery.flexisel.js"></script>
     <link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css " />
-    <script src="js/easyResponsiveTabs.js"></script>
+    <script src="js/easyResponsiveTabs.js"></script> --}}
     <!--Plug-in Initialisation-->
-    <script type="text/javascript">
+    {{-- <script type="text/javascript">
         $(document).ready(function() {
 
             //Vertical Tab
@@ -111,10 +112,10 @@
                 }
             });
         });
-    </script>
+    </script> --}}
     <!--/script-->
 
-    <script type="text/javascript" src="js/move-top.js"></script>
+    {{-- <script type="text/javascript" src="js/move-top.js"></script>
     <script type="text/javascript" src="js/easing.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function($) {
@@ -125,14 +126,15 @@
                 }, 900);
             });
         });
-    </script>
+    </script> --}}
+
     <!-- swipe box js -->
-    <script src="js/jquery.swipebox.min.js"></script>
+    {{-- <script src="js/jquery.swipebox.min.js"></script>
     <script type="text/javascript">
         jQuery(function($) {
             $(".swipebox").swipebox();
         });
-    </script>
+    </script> --}}
     <!-- //swipe box js -->
 
     <script type="text/javascript">
@@ -155,3 +157,4 @@
 
     <!--end-smooth-scrolling-->
     <script src="js/bootstrap.js"></script>
+    @yield('scripts')

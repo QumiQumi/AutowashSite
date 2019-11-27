@@ -1,4 +1,5 @@
-@extends('layouts.default') @section('content')
+@extends('layouts.default')
+@section('content')
 
 <div class="main-top" id="home">
     <!-- banner section -->
@@ -107,4 +108,12 @@
         </div>
 @stop
 
+@section('scripts')
+     <!-- js files -->
+    <!-- POGO SLIDER box js -->
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/jquery.pogo-slider.min.js"></script>
+    <script src="js/main.js"></script>
 
+
+@endsection

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Service;
+use Doctrine\DBAL\Schema\View;
 use Illuminate\Http\Request;
 use Symfony\Contracts\Service\ServiceSubscriberInterface;
 
@@ -17,12 +18,15 @@ class ServiceController extends Controller
     {
         //
         $pricelist = Service::all()->sortBy('id');
-        return view('pages.pricelist', ['pricelist' => $pricelist]);
+        return view('pages.pricelist.pricelist', ['pricelist' => $pricelist]);
     }
 
 
-    public function show(ServiceForCar $serviceForCar)
+    public function show(Service $service)
     {
         //
+        //dd($service);
+        return view('pages.pricelist.show', ['service'=>$service]);
+
     }
 }

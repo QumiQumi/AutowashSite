@@ -28,13 +28,9 @@ Route::get(
     }
 )->name('about');
 
-// Route::get(
-//     '/pricelist',
-//     function () {
-//         return View::make('pages.pricelist');
-//     }
-// )->name('pricelist');;
+
 Route::get('/pricelist', 'ServiceController@index')->name('pricelist');
+Route::get('/pricelist/{service}', 'ServiceController@show')->name('pricelist.show');
 
 
 Route::get(

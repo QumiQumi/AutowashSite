@@ -58,12 +58,13 @@ Route::get(
         return View::make('pages.news');
     }
 );
-Route::get(
-    '/comment',
-    function () {
-        return View::make('pages.comment');
-    }
-);
-Auth::routes();
+// Route::get(
+//     '/comment',
+//     function () {
+//         return View::make('pages.comment');
+//     }
+// );
+Route::get('/comment', 'CommentController@index')->name('comment');
 
+Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');

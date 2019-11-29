@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content')
 
-<div class="main-top" id="home">
+<div class="main-top" >
     <!-- banner section -->
     <div class="pogoSlider" id="js-main-slider">
 

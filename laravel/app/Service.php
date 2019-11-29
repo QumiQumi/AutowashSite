@@ -10,9 +10,9 @@ class Service extends Model
     {
         return $this->hasMany(ServiceForCar::class);
     }
-    public function cars()
-    {
-        return Car::all();
-    }
+    // public function cars()
+    // {
+    //     return Car::all();
+    // }
 
 }

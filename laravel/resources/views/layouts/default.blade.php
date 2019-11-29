@@ -7,7 +7,7 @@
     @include('includes.head')
 </head>
 
-<body>
+<body id="home">
     @include('includes.header')
     @yield('content')
     <!-- Nav tabs -->

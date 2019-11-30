@@ -32,39 +32,31 @@ Route::get(
 Route::get('/pricelist', 'ServiceController@index')->name('pricelist');
 Route::get('/pricelist/{service}', 'ServiceController@show')->name('pricelist.show');
 
-
-Route::get(
-    '/team',
-    function () {
-        return View::make('pages.team');
-    }
-)->name('team');
+Route::get('/team', 'TeammateController@index')->name('team');
 
 Route::get(
     '/gallery',
     function () {
         return View::make('pages.gallery');
     }
-);
+)->name('gallery');
+
 Route::get(
-    '/contact',
+    '/contacts',
     function () {
-        return View::make('pages.contact');
+        return View::make('pages.contacts');
     }
-);
+)->name('contacts');
+
 Route::get(
     '/news',
     function () {
         return View::make('pages.news');
     }
-);
-// Route::get(
-//     '/comment',
-//     function () {
-//         return View::make('pages.comment');
-//     }
-// );
-Route::get('/comment', 'CommentController@index')->name('comment');
-Route::post('/comment', 'CommentController@store');
+)->name('news');
+
+Route::get('/comments', 'CommentController@index')->name('comments');
+Route::post('/comments', 'CommentController@store');
+
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');

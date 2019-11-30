@@ -33,13 +33,13 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav cl-effect-14">
-                    <li><a class="scroll" href="{{route('about')}}">О компании</a></li>
+                        <li><a class="scroll" href="{{route('about')}}">О компании</a></li>
                         <li><a class="scroll" href="{{route('pricelist')}}">Прайс</a></li>
                         <li><a class="scroll" href="{{route('team')}}">Наша команда</a></li>
-                        <li><a class="scroll" href="/gallery">Галлерея</a></li>
-                        <li><a class="scroll" href="/contact">Контакты</a></li>
-                        <li><a class="scroll" href="/news">Новости</a></li>
-                        <li><a class="scroll" href="/comment">Отзывы</a></li>
+                        <li><a class="scroll" href="{{route('gallery')}}">Галерея</a></li>
+                        <li><a class="scroll" href="{{route("contacts")}}">Контакты</a></li>
+                        <li><a class="scroll" href="{{route('news')}}">Новости</a></li>
+                        <li><a class="scroll" href="{{route('comments')}}">Отзывы</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->

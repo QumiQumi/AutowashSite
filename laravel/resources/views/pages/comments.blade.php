@@ -9,10 +9,10 @@
         <div class="t-head">
             <h3 class="head">Добавить отзыв</h3>
         </div>
-        <form method="post" action="/comment">
+        <form method="post" action="{{route('comments')}}">
             @csrf
             <div class="form-group">
-                    <textarea id="my-textarea" class="form-control noresize" name="text" rows="3"></textarea>
+                    <textarea id="my-textarea" class="form-control noresize" name="text" rows="3" required></textarea>
             </div>
             <button type="submit" class="btn btn-default btn-lg btn-block">ОТПРАВИТЬ</button>
         </form>

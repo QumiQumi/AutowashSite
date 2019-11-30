@@ -65,6 +65,6 @@ Route::get(
 //     }
 // );
 Route::get('/comment', 'CommentController@index')->name('comment');
-
+Route::post('/comment', 'CommentController@store');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');

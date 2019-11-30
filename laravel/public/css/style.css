@@ -2612,5 +2612,9 @@ ul.top-links.two {
     }
 }
 
+textarea.noresize {
+    resize: none;
+}
+
 
 /*-- //responsive design --*/

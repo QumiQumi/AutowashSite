@@ -21,7 +21,7 @@
             <tbody>
                 @foreach ($pricelist as $item)
 
-                    <tr onclick="window.location.href='{{route('pricelist.show', $item->id)}}'; return false">
+                    <tr onclick="window.location.href='{{route('pricelist.show', $item)}}'; return false">
                         <td>
                             {{$item->name}}
                         </td>

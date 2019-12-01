@@ -8,12 +8,12 @@
             <div class="agile_team_grids">
                 <div class="col-md-3 agile_team_grid">
                     <div class="agile_team_grid_main">
-                        <img src="images/{{$teammate->photo}}" alt=" " class="img-responsive">
+                        <img src="/images/{{$teammate->photo}}" alt=" " class="img-responsive">
                         <div class="p-mask">
                             <ul class="top-links two">
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-vk"></i></a></li>
                                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                             </ul>
                         </div>

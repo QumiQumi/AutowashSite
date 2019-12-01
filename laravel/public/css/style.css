@@ -2617,5 +2617,9 @@ textarea.noresize {
     resize: none;
 }
 
+.no-link-decoration a {
+    text-decoration: none;
+}
+
 
 /*-- //responsive design --*/

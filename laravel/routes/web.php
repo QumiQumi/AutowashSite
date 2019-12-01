@@ -48,12 +48,9 @@ Route::get(
     }
 )->name('contacts');
 
-Route::get(
-    '/news',
-    function () {
-        return View::make('pages.news');
-    }
-)->name('news');
+
+Route::get('/news', 'ArticleController@index')->name('news');
+Route::get('/news/{article}', 'ArticleController@show')->name('news.show');
 
 Route::get('/comments', 'CommentController@index')->name('comments');
 Route::post('/comments', 'CommentController@store');

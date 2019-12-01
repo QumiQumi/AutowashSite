@@ -11,7 +11,7 @@
             <ul class="top-links">
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-vk"></i></a></li>
                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
             </ul>
             <div class="clearfix"></div>
@@ -28,7 +28,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-                    <h1><a class="navbar-brand" href="index.html">ЭЛИТНАЯ <span> Автомобильная Мойка</span></a></h1>
+                    <h1><a class="navbar-brand" href="index.html"><span> Автомобильная Мойка</span></a></h1>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
@@ -36,9 +36,9 @@
                         <li><a class="scroll" href="{{route('about')}}">О компании</a></li>
                         <li><a class="scroll" href="{{route('pricelist')}}">Прайс</a></li>
                         <li><a class="scroll" href="{{route('team')}}">Наша команда</a></li>
-                        <li><a class="scroll" href="{{route('gallery')}}">Галерея</a></li>
+                        {{-- <li><a class="scroll" href="{{route('gallery')}}">Галерея</a></li> --}}
                         <li><a class="scroll" href="{{route("contacts")}}">Контакты</a></li>
-                        <li><a class="scroll" href="{{route('news')}}">Новости</a></li>
+                        <li><a class="scroll" href="{{route('news')}}">Статьи</a></li>
                         <li><a class="scroll" href="{{route('comments')}}">Отзывы</a></li>
                     </ul>
                 </div>

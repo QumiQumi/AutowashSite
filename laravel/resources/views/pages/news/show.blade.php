@@ -4,11 +4,11 @@
 <div class="tabs-grids " id="about">
         <div class="container">
             <div class="t-head">
-                <h3 class="head">{{$service->name}} </h3>
+                <h3 class="head">{{$article->name}} </h3>
             </div>
-            @if ($service->image!=null)
+            @if ($article->image!=null)
             <div class="text-center">
-                <img src="/images/{{$service->image}}" alt=" " class="img" />
+                <img src="/images/{{$article->image}}" alt=" " class="img-responsive" />
                 {{-- img-responsiv для выраынивания по правому краю --}}
             </div>
             @endif
@@ -18,7 +18,7 @@
 
                         <div class="text agile-info text-pre">
 
-                                <p>{{$service->description}}</p>
+                                <p>{{$article->text}}</p>
                         </div>
 
                     </div>

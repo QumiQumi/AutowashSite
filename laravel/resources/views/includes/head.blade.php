@@ -23,4 +23,5 @@
 <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
 <link href="//fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
+@yield('styles')
 

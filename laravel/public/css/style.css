@@ -96,7 +96,8 @@ body {
 }
 
 ul.top-contacts,
-ul.top-links {
+ul.top-links,
+ul.top-auth {
     list-style: none;
 }
 
@@ -105,6 +106,10 @@ ul.top-contacts {
 }
 
 ul.top-links {
+    float: left;
+}
+
+ul.top-auth {
     float: right;
 }
 
@@ -118,8 +123,13 @@ ul.top-links li {
     display: inline-block;
 }
 
+ul.top-auth li {
+    display: inline-block;
+}
+
 .top-bar ul.top-contacts li p,
-.top-bar ul.top-contacts li p a {
+.top-bar ul.top-contacts li p a,
+.top-bar ul.top-auth li {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
@@ -127,11 +137,24 @@ ul.top-links li {
     padding-top: 7px;
 }
 
+.top-bar ul.top-auth li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown-menu-my {
+    background-color: #222;
+    text-decoration: none;
+}
+
 .top-bar ul.top-contacts li p span {
     vertical-align: middle;
     text-align: center;
     line-height: 1px;
-    margin-right: 5px;
+}
+
+.dropdown-menu-my {
+    margin: auto;
 }
 
 ul.top-contacts li p a:focus,

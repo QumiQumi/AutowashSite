@@ -54,6 +54,9 @@ Route::get('/news/{article}', 'ArticleController@show')->name('news.show');
 
 Route::get('/comments', 'CommentController@index')->name('comments');
 Route::post('/comments', 'CommentController@store');
+Route::get('/comments/{comment}/edit', 'CommentController@edit')->name('comments.edit');
+Route::put('/comments/{comment}', 'CommentController@update')->name('comments.update');
+Route::delete('/comments/{comment}', 'CommentController@delete')->name('comments.delete');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');

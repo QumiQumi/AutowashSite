@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Comment;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CommentController extends Controller
 {
@@ -12,7 +13,7 @@ class CommentController extends Controller
     {
         $comments = Comment::latest()->get();
         //$about=App\About::paginate(2);
-        return view('pages.comments', ['comments' => $comments]);
+        return view('pages.comments.comments', ['comments' => $comments]);
     }
     public function store()
     {
@@ -20,10 +21,38 @@ class CommentController extends Controller
         //     'text' => 'required'
         // ]);
         $comment = new Comment();
-        $comment->user_id = 1;
+        if (Auth::user() != null) {
+            $comment->user_id = Auth::user()->id;
+        } else {
+            $comment->user_id = 1;
+        }
         $comment->text = request('text');
         $comment->created_at = now('Asia/Novosibirsk');
         $comment->save();
+        session()->put('commentId', $comment->id);
+
+        return redirect(route('comments'));
+    }
+    public function edit(Comment $comment)
+    {
+        return view('pages.comments.edit', ['comment'=>$comment]);
+    }
+    public function update(Comment $comment)
+    {
+        if (Auth::user() != null) {
+            $comment->user_id = Auth::user()->id;
+        } else {
+            $comment->user_id = 1;
+        }
+        $comment->text = request('text');
+        $comment->updated_at = now('Asia/Novosibirsk');
+        $comment->save();
+
+        return redirect(route('comments'));
+    }
+    public function delete(Comment $comment)
+    {
+        $comment->delete();
         return redirect(route('comments'));
     }
 }

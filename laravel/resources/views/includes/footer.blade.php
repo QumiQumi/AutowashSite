@@ -22,13 +22,12 @@
             <div class="col-md-4 agileinfo_footer_grid">
                 <h3>Навигация по сайту</h3>
                 <ul class="agileinfo_footer_grid_nav">
-                    <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i> <a class="scroll" href="#home">Домой</a></li>
-                    <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i> <a class="scroll" href="#service">О компании</a></li>
-                    <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i> <a class="scroll" href="#about">Прайс</a></li>
-                    <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i> <a class="scroll" href="#team">Наша командa</a></li>
-                    <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i> <a class="scroll" href="#contact">Контакты</a></li>
-                    <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i> <a class="scroll" href="#contact">Новости</a></li>
-                    <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i> <a class="scroll" href="#contact">Отзывы</a></li>
+                    <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i> <a class="scroll" href="{{route('about')}}">О компании</a></li>
+                    <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i> <a class="scroll" href="{{route('pricelist')}}">Прайс</a></li>
+                    <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i> <a class="scroll" href="{{route('team')}}">Наша командa</a></li>
+                    <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i> <a class="scroll" href="{{route('contacts')}}">Контакты</a></li>
+                    <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i> <a class="scroll" href="{{route('news')}}">Новости</a></li>
+                    <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i> <a class="scroll" href="{{route('comments')}}">Отзывы</a></li>
                 </ul>
             </div>
             <div class="clearfix"> </div>

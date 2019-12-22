@@ -22,20 +22,20 @@
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                       <p> <a class="nav-link" href="{{ route('login') }}">{{ __('Вход') }}</a></p>
                     </li>
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                           <p> <a class="nav-link" href="{{ route('register') }}">{{ __('Регистрация') }}</a></p>
                         </li>
                     @endif
                 @else
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                         {{ Auth::user()->name }} <span class="caret"></span>
-                        </a>
+                        {{-- <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> --}}
+                         <p>Привет, {{ Auth::user()->name }}!</span></p>
 
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-my" aria-labelledby="navbarDropdown">
+
+                        {{-- <div class="dropdown-menu dropdown-menu-right dropdown-menu-my" aria-labelledby="navbarDropdown">
                             <a class="" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                                 document.getElementById('logout-form').submit();">
@@ -45,7 +45,18 @@
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
-                        </div>
+                        </div> --}}
+                    </li>
+                    <li class="nav-item">
+                        <p><a class="nav-link" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                                {{ __('Выйти из аккаунта') }}
+                            </a>
+                        </p>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
                     </li>
                 @endguest
             </ul>

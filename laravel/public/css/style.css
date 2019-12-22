@@ -128,8 +128,7 @@ ul.top-auth li {
 }
 
 .top-bar ul.top-contacts li p,
-.top-bar ul.top-contacts li p a,
-.top-bar ul.top-auth li {
+.top-bar ul.top-contacts li p a {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
@@ -137,9 +136,14 @@ ul.top-auth li {
     padding-top: 7px;
 }
 
-.top-bar ul.top-auth li a {
+.top-bar ul.top-auth li p,
+.top-bar ul.top-auth li p a {
     color: #fff;
     text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 7px;
+    margin-left: 10px;
 }
 
 .dropdown-menu-my {
@@ -158,7 +162,8 @@ ul.top-auth li {
 }
 
 ul.top-contacts li p a:focus,
-.top-bar ul.top-contacts li p a:hover {
+.top-bar ul.top-contacts li p a:hover,
+.top-bar ul.top-auth li a:hover {
     color: #222;
     text-decoration: none;
 }

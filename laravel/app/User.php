@@ -8,6 +8,8 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+    const ROLE_USER = 1;
+    const ROLE_ADMIN = 10;
     use Notifiable;
 
     /**
@@ -16,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'role',
     ];
 
     /**
@@ -36,4 +38,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // is admin
+    public function isAdmin():bool
+    {
+        return $this->role===self::ROLE_ADMIN; // поле is_admin в таблице users
+    }
 }

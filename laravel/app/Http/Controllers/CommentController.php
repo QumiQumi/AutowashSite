@@ -9,13 +9,14 @@ use Illuminate\Support\Facades\Auth;
 
 class CommentController extends Controller
 {
+
     public function index()
     {
         $comments = Comment::latest()->get();
         //$about=App\About::paginate(2);
         return view('pages.comments.comments', ['comments' => $comments]);
     }
-    public function store()
+    public function store(Request $request)
     {
         // request()->validate([
         //     'text' => 'required'
@@ -31,11 +32,19 @@ class CommentController extends Controller
         $comment->save();
         session()->put('commentId', $comment->id);
 
-        return redirect(route('comments'));
+        // $input = $request->all();
+        // \Log::info($input);
+        // return response()->json(['success'=>'Получилось!']);
+         return redirect(route('comments'));
     }
     public function edit(Comment $comment)
     {
-        return view('pages.comments.edit', ['comment'=>$comment]);
+        if (session()->get('commentId')==$comment->id) {
+            return view('pages.comments.edit', ['comment'=>$comment]);
+        }
+        else{
+            return abort(404);
+        }
     }
     public function update(Comment $comment)
     {

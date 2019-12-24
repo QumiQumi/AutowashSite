@@ -16,7 +16,7 @@ class CreateArticlesTable extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('descrition');
+            $table->string('description');
             $table->text('text');
             $table->string('image')->nullable()->default('default_article.jpg');
             $table->timestamps();

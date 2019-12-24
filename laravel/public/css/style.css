@@ -641,7 +641,7 @@ h3.head {
 /*-- work --*/
 
 #about {
-    padding: 5em 0;
+    padding: 3em 0;
 }
 
 .work {
@@ -1855,7 +1855,7 @@ ul.top-links.two {
         text-transform: uppercase;
     }
     #about {
-        padding: 4em 0;
+        padding: 2em 0;
     }
     #gallery {
         padding: 5em 0 5em 0;
@@ -2345,7 +2345,7 @@ ul.top-links.two {
         bottom: 80px;
     }
     #about {
-        padding: 3em 0;
+        padding: 2em 0;
     }
     .work {
         padding: 3em 0 0;
@@ -2653,5 +2653,17 @@ textarea.noresize {
     margin-top: 20px;
 }
 
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    /* display: flex;
+    align-items: center; */
+}
+
 
 /*-- //responsive design --*/
+
+.m-xxs {
+    margin: 2px 4px;
+}

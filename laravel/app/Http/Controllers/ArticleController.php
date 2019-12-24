@@ -29,6 +29,7 @@ class ArticleController extends Controller
     public function create()
     {
         //
+        return view('pages.news.create');
     }
 
     /**
@@ -40,6 +41,12 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         //
+        $article=new Article();
+        $article->name=$request->name;
+        $article->description=$request->description;
+        $article->text=$request->text;
+        $article->save();
+        return redirect(route('news'));
     }
 
 
@@ -53,6 +60,7 @@ class ArticleController extends Controller
     public function edit(Article $article)
     {
         //
+        return view('pages.news.edit', ['article'=>$article]);
     }
 
     /**
@@ -65,6 +73,11 @@ class ArticleController extends Controller
     public function update(Request $request, Article $article)
     {
         //
+        $article->name=$request->name;
+        $article->description=$request->description;
+        $article->text=$request->text;
+        $article->save();
+        return redirect(route('news'));
     }
 
     /**
@@ -76,5 +89,7 @@ class ArticleController extends Controller
     public function destroy(Article $article)
     {
         //
+        $article->delete();
+        return redirect(route('news'));
     }
 }

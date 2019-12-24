@@ -1,24 +1,25 @@
 @extends('layouts.default')
 @section('content')
 
-
+ {{-- Добавить отзыв --}}
+ @auth
 <div class="tabs" id="about">
-    {{-- Отзывы --}}
     <div class="container ">
-        {{-- Добавить отзыв --}}
         <div class="t-head">
             <h3 class="head">Добавить отзыв</h3>
         </div>
         <form method="post" action="{{route('comments')}}">
+            {{-- <form> --}}
             @csrf
             <div class="form-group">
-                    <textarea id="my-textarea" class="form-control noresize" name="text" rows="3" required></textarea>
+                <textarea id="my-textarea" class="form-control noresize" name="text" rows="3" required></textarea>
             </div>
             <button type="submit" class="btn btn-default btn-lg btn-block">ОТПРАВИТЬ</button>
         </form>
     </div>
 </div>
-<div class="tabs" id="work">
+@endauth
+<div class="tabs" id="about">
     {{-- Отзывы --}}
     <div class="container ">
 
@@ -62,4 +63,31 @@
     </div>
 </div>
 
-@stop
+@endsection
+
+@section('scripts')
+{{-- <script type="text/javascript">
+
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+    $(".btn-submit").click(function(e){
+
+        e.preventDefault();
+
+        var text = $("input[name=text]").val();
+
+        $.ajax({
+           type:'POST',
+           url:"{{route('comments')}}",
+           data:{text:text},
+           success:function(data){
+              alert(data.success);
+           }
+        });
+	});
+</script> --}}
+@endsection

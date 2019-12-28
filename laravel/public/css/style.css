@@ -2664,6 +2664,28 @@ textarea.noresize {
 
 /*-- //responsive design --*/
 
-.m-xxs {
-    margin: 2px 4px;
+.m-bottom-xxs {
+    margin-bottom: 10px;
+}
+
+.m-side-s {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+}
+
+.img_wrap {
+    width: 100px;
+    height: 100px;
+}
+
+.img_wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 0;
 }

@@ -76,12 +76,12 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-                    <h1><a class="navbar-brand" href="index.html"><span> Автомобильная Мойка</span></a></h1>
+                    <h1><a class="navbar-brand"><span> Автомобильная Мойка</span></a></h1>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav cl-effect-14">
-                        
+
                         <li><a class="scroll" href="{{route('about')}}">О компании</a></li>
                         <li><a class="scroll" href="{{route('pricelist')}}">Прайс</a></li>
                         <li><a class="scroll" href="{{route('team')}}">Наша команда</a></li>

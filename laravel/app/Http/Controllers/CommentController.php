@@ -21,6 +21,7 @@ class CommentController extends Controller
         // request()->validate([
         //     'text' => 'required'
         // ]);
+        //dd($request);
         $comment = new Comment();
         if (Auth::user() != null) {
             $comment->user_id = Auth::user()->id;
@@ -35,14 +36,13 @@ class CommentController extends Controller
         // $input = $request->all();
         // \Log::info($input);
         // return response()->json(['success'=>'Получилось!']);
-         return redirect(route('comments'));
+        return redirect(route('comments'));
     }
     public function edit(Comment $comment)
     {
-        if (session()->get('commentId')==$comment->id) {
-            return view('pages.comments.edit', ['comment'=>$comment]);
-        }
-        else{
+        if (session()->get('commentId') == $comment->id || Auth::check()) {
+            return view('pages.comments.edit', ['comment' => $comment]);
+        } else {
             return abort(404);
         }
     }

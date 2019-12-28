@@ -55,57 +55,6 @@
         </div>
     </div>
 </div>
-
-{{-- banner --}}
- <!--//what-we-do-->
-    <!--count-down -->
-    {{-- <div class="count" id="service">
-        <div class="container">
-            <div class="col-md-3 agile_count_grid">
-                <div class="agile_count_grid_left">
-                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-                </div>
-                <div class="agile_count_grid_right">
-                    <p class="counter">324</p>
-                </div>
-                <div class="clearfix"> </div>
-                <h3>Чистых машин</h3>
-            </div>
-            <div class="col-md-3 agile_count_grid">
-                <div class="agile_count_grid_left">
-                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                </div>
-                <div class="agile_count_grid_right">
-                    <p class="counter">543</p>
-                </div>
-                <div class="clearfix"> </div>
-                <h3>Счастливых клиентов</h3>
-            </div>
-            <div class="col-md-3 agile_count_grid">
-                <div class="agile_count_grid_left">
-                    <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
-                </div>
-                <div class="agile_count_grid_right">
-                    <p class="counter">434</p>
-                </div>
-                <div class="clearfix"> </div>
-                <h3>People Loved</h3>
-            </div>
-            <div class="col-md-3 agile_count_grid">
-                <div class="agile_count_grid_left">
-                    <span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span>
-                </div>
-                <div class="agile_count_grid_right">
-                    <p class="counter">10000</p>
-                </div>
-                <div class="clearfix"> </div>
-                <h3>Save Income</h3>
-            </div>
-
-            <div class="clearfix"> </div>
-
-        </div>
-    </div> --}}
 @stop
 
 @section('scripts')

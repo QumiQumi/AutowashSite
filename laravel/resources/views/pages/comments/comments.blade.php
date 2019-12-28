@@ -8,7 +8,7 @@
         <div class="t-head">
             <h3 class="head">Добавить отзыв</h3>
         </div>
-        <form method="post" action="{{route('comments')}}">
+        <form method="post" action="{{route('comments')}}"  enctype="multipart/form-data">
             {{-- <form> --}}
             @csrf
             <div class="form-group">
@@ -29,34 +29,32 @@
         @foreach ($comments as $comment)
             <div class="panel panel-default post">
                 <div class="row panel-body">
-                    <div class="col-sm-2 text-center">
-                        <div>
-                            <img src="/images/user_1.jpg" class="img-circle avatar" alt="user profile image">
-                        </div>
-                        <div class="text-center">
-                            @if(session()->get('commentId')==$comment->id)
-                            <p>
-                                <a href="{{route('comments.edit', $comment)}}"><i class="fa fa-edit"></i></a>
-                                <a href="{{route('comments.delete', $comment)}}"
-                                    onclick="event.preventDefault();
-                                    document.getElementById('delete-comment-form').submit();">
-                                        <i class="fa fa-trash"></i>
-                                </a>
-                                <form id="delete-comment-form" action="{{ route('comments.delete', $comment) }}" method="POST" style="display: none;">
-                                    @csrf
-                                    @method('DELETE')
-                                </form>
-                            </p>
-                            @endif
-
+                    <div class="col-sm-2 text-center vcenter">
+                        <div class="img_wrap">
+                        <img src="/images/avatars/{{$comment->user->image}}" class="img-circle" alt="user profile image">
                         </div>
                     </div>
 
-                    <div class="col-sm-10">
+                    <div class="col-sm-7 vcenter">
                         <h4><a href="#"><b>{{ $comment->user->name}}</b></a></h4>
                         <h6 class="text-muted time">{{$comment->created_at}}</h6>
                         <p>{{$comment->text}}</p>
                     </div>
+                    @if(Auth::check())
+                        @if(session()->get('commentId')==$comment->id || Auth::user()->can('admin-panel'))
+                            <div class="col-md-2 vcenter">
+                                <h1>
+                                <a href="{{route('comments.edit', $comment)}}" class="btn btn-warning btn-block m-bottom-xxs">Редактировать</a>
+                                <form id="delete-article-form" action="{{route('comments.delete', $comment)}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-danger btn-block m-bottom-xxs" type="submit">Удалить</button>
+                                </form>
+                            </h1>
+                            </div>
+                        @endif
+                    @endif
+
                 </div>
             </div>
         @endforeach

@@ -10,6 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
  */
+
+use Illuminate\Routing\RouteGroup;
+
 //About
 Route::get(
     '/',
@@ -29,19 +32,18 @@ Route::get(
 )->name('about');
 
 //Pricelist
-Route::get('/pricelist', 'ServiceController@index')->name('pricelist');
-Route::get('/pricelist/{service}', 'ServiceController@show')->name('pricelist.show');
+Route::group(['prefix' => 'pricelist'], function () {
+    Route::get('/', 'ServiceController@index')->name('pricelist');
+    Route::group(['middleware' => 'admin'], function () {
+        Route::post('/', 'ServiceController@store')->name('pricelist.store');
+        Route::put('/{service}', 'ServiceController@update')->name('pricelist.update');
+        Route::delete('/{service}', 'ServiceController@destroy')->name('pricelist.destroy');
+    });
+    Route::get('/{service}', 'ServiceController@show')->name('pricelist.show');
+});
 
 //Team
 Route::get('/team', 'TeammateController@index')->name('team');
-
-//Gallery
-Route::get(
-    '/gallery',
-    function () {
-        return View::make('pages.gallery');
-    }
-)->name('gallery');
 
 //Contacts
 Route::get(
@@ -52,30 +54,34 @@ Route::get(
 )->name('contacts');
 
 //News
-Route::get('/news', 'ArticleController@index')->name('news');
-Route::get('/news/{article}', 'ArticleController@show')->name('news.show');
+Route::group(['prefix' => 'news'], function () {
+    Route::get('/', 'ArticleController@index')->name('news');
+    //Для админа
+    Route::group(['middleware' => 'admin'], function () {
+        Route::get('/create', 'ArticleController@create')->name('news.create');
+        Route::post('/create', 'ArticleController@store')->name('news.store');
+        Route::get('/{article}/edit', 'ArticleController@edit')->name('news.edit');
+        Route::put('/{article}', 'ArticleController@update')->name('news.update');
+        Route::delete('/{article}', 'ArticleController@destroy')->name('news.destroy');
+    });
+    Route::get('/{article}', 'ArticleController@show')->name('news.show');
+});
 
 //Comments
-Route::get('/comments', 'CommentController@index')->name('comments');
-Route::post('/comments', 'CommentController@store');
-Route::get('/comments/{comment}/edit', 'CommentController@edit')
-    ->name('comments.edit')
-    ->middleware('auth');
-Route::put('/comments/{comment}', 'CommentController@update')
-    ->name('comments.update')
-    ->middleware('auth');
-Route::delete('/comments/{comment}', 'CommentController@delete')
-    ->name('comments.delete')
-    ->middleware('auth');
+Route::group(['prefix' => 'comments'], function () {
+    Route::get('/', 'CommentController@index')->name('comments');
+    Route::post('/', 'CommentController@store');
+    //Для авторизованного пользователя
+    Route::group(['middleware' => 'auth'], function () {
+        Route::put('/{comment}', 'CommentController@update')
+        ->name('comments.update');
+        Route::delete('/{comment}', 'CommentController@delete')
+        ->name('comments.delete');
+        Route::get('/{comment}/edit', 'CommentController@edit')
+            ->name('comments.edit')->middleware(['admin']);
+    });
+});
+
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-
-// только для админа
-Route::group( [ 'middleware' => 'admin' ], function () {
-    Route::get('/news/create', 'ArticleController@create')->name('news.create');
-    Route::post('/news/create', 'ArticleController@store')->name('news.store');
-    Route::get('/news/{article}/edit', 'ArticleController@edit')->name('news.edit');
-    Route::put('/news/{article}', 'ArticleController@update')->name('news.update');
-    Route::delete('/news/{article}', 'ArticleController@destroy')->name('news.destroy');
-    });
